@@ -1,5 +1,4 @@
 const container = document.querySelector(".container");
-container.setAttribute("style","display: flex; flex-direction: column;")
 
 for(let i = 0; i < 16; i++)
 {

@@ -16,4 +16,19 @@ function createGrid()
         }
         container.appendChild(row);
     }
+    const divs = document.querySelectorAll(".square");
+    //console.log(divs);
+    divs.forEach((square) => {
+        square.addEventListener("mouseenter",()=>
+        {
+            console.log("in");
+            square.classList.add("divHover");
+        })
+        square.addEventListener("mouseleave",()=>
+        {
+            square.classList.remove("divHover");
+        })
+    });
 }
+
+createGrid()

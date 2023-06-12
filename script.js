@@ -7,7 +7,9 @@ for(let i = 0; i < 16; i++)
     for(let j = 0; j < 16; j++)
     {
         let div = document.createElement("div");
-        div.textContent = `${j}`;
+        div.classList.add("square");
+        //div.textContent = `${j}`;
+        div.setAttribute("style","padding : 10px; margin: 2px; border-style: solid")
         row.appendChild(div);
     }
     container.appendChild(row);

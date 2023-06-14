@@ -27,12 +27,16 @@ function createGrid(n)
     divs.forEach((square) => {
         square.addEventListener("mouseenter",()=>
         {
-            console.log("in");
+            //console.log("in");
             square.classList.add("divHover");
         })
         square.addEventListener("mouseleave",()=>
         {
             square.classList.remove("divHover");
+        })
+        square.addEventListener("mousedown", ()=>
+        {
+            square.classList.add("divClick");
         })
     });
 }

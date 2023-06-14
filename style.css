@@ -1,6 +1,9 @@
 .container {
     display: flex;
     flex-direction: column;
+    width: 900px;
+    height: 900px;
+    border-style: solid;
   }
 
 .divHover {
@@ -16,4 +19,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+
+button {
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background-color: black;
 }

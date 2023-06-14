@@ -2,7 +2,7 @@ const container = document.querySelector(".container");
 
 function createGrid(n)
 {
-    let contSize = 900;
+    let contSize = 700;
     while (container.firstChild) {
         container.removeChild(container.lastChild);
     }

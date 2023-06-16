@@ -36,9 +36,30 @@ function createGrid(n)
         })
         square.addEventListener("mousedown", ()=>
         {
-            square.classList.add("divClick");
+            //square.classList.add("divClick");
+            //console.log(generateRandomColor());
+            if(!square.classList.contains('coloured'))
+            {
+                square.style.backgroundColor = generateRandomColor();
+                square.style.opacity = 0.1;
+                square.classList.add("coloured");
+            }
+            else if(Number(square.style.opacity)!==1)
+            {
+                square.style.opacity = Number(square.style.opacity) + 0.1;
+                console.log(square.style.opacity);
+            }
         })
     });
+}
+
+function generateRandomColor(){
+    let maxVal = 0xFFFFFF; // 16777215
+    let randomNumber = Math.random() * maxVal; 
+    randomNumber = Math.floor(randomNumber);
+    randomNumber = randomNumber.toString(16);
+    let randColor = randomNumber.padStart(6, 0);   
+    return `#${randColor.toUpperCase()}`
 }
 
 function promptUser()
